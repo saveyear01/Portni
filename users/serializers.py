@@ -57,7 +57,7 @@ class AuthTokenSerializer(serializers.Serializer):
 
         return token
 
-class BaseUserSerializer(serializers.Serializer):
+class BaseUserSerializer(serializers.ModelSerializer):
     """
         Base user serializer
     """
@@ -107,3 +107,20 @@ class RegisterSerializer(serializers.ModelSerializer):
         self.user = self.Meta.model.objects.create_user(email=email, **data)
 
         return data
+
+class UserSerializer(BaseUserSerializer):
+    """
+        User serializer
+    """
+    class Meta:
+        model = get_user_model()
+        fields = (
+            'id',
+            'email',
+            'username',
+            'first_name',
+            'last_name'
+        )
+
+    def __init__(self, *args, **kwargs):
+        super(UserSerializer, self).__init__(*args, **kwargs)

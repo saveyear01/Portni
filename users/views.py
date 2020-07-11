@@ -7,7 +7,8 @@ from rest_framework.viewsets import ViewSet, ModelViewSet
 
 from .serializers import (
     AuthTokenSerializer,
-    RegisterSerializer
+    RegisterSerializer,
+    UserSerializer
 )
 
 
@@ -59,6 +60,14 @@ class Register(APIView):
             'token': auth_serializer.get_token().key
         })
 
-
+class AuthUser(ViewSet):
+    """
+        auth user endpoint
+    """
+    serializer_class = UserSerializer
+    def get(self, request):
+        serializer = self.serializer_class(request.user)
+        print(serializer.data)
+        return Response(serializer.data, status=200)
 
 
