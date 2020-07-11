@@ -88,6 +88,8 @@ class RegisterSerializer(serializers.ModelSerializer):
         fields = (
             'id',
             'email',
+            'username',
+            'first_name',
             'last_name',
             'password',
         )
@@ -99,9 +101,9 @@ class RegisterSerializer(serializers.ModelSerializer):
     def validate(self, data):
         email = data.pop('email')
 
-        if self.Meta.objects.filter(email=email).exists():
+        if self.Meta.model.objects.filter(email=email).exists():
             raise serializers.ValidationError("Email already used")
 
-        self.user = self.Meta.objects.create_user(email=email, **data)
+        self.user = self.Meta.model.objects.create_user(email=email, **data)
 
         return data

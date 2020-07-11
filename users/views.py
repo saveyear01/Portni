@@ -36,3 +36,29 @@ class Login(APIView):
         return Response({
             'token': serializer.get_token().key
         })
+
+class Register(APIView):
+    permission_classes = (AllowAny,)
+    serializer_class = RegisterSerializer
+
+    def post(self, request):
+        serializer = self.serializer_class(
+            data=request.data, request=request
+        )
+        data = {
+            'email': request.data.get('email'),
+            'password': request.data.get('password')
+        }
+        serializer.is_valid(raise_exception=True)
+        auth_serializer = AuthTokenSerializer(
+            data=data, request=request
+        )
+        auth_serializer.is_valid(raise_exception=True)
+
+        return Response({
+            'token': auth_serializer.get_token().key
+        })
+
+
+
+
