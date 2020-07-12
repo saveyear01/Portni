@@ -120,6 +120,7 @@ class UserSerializer(BaseUserSerializer):
             'username',
             'first_name',
             'last_name',
+            'is_staff'
         )
 
     def __init__(self, *args, **kwargs):
