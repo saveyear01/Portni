@@ -15,11 +15,33 @@ export class AuthService {
     try {
       const response = this.http.post(API_AUTH_LOGIN, data)
         .toPromise();
+
+      this.setToken(response);
+      
       return response
     } catch (error) {
       console.log(error)
     }
   }
 
+  setToken(resp: any) {
+    resp.then((data) => {
+    window.localStorage.setItem('key', data.token);
+    })
+  }
 
+  isAuthenticated() {
+    return !!window.localStorage.getItem('key');
+  }
+
+  getToken() {
+    if(this.isAuthenticated()) {
+      return window.localStorage.getItem('key');
+    }
+    return null;
+  }
+
+  removeToken() {
+    window.localStorage.removeItem('key');
+  }
 }

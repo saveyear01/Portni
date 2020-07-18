@@ -22,12 +22,11 @@ export class LoginComponent implements OnInit {
   }
 
   onSubmit({value, valid}) {
-
     if(valid) {
       // call the login service 
       this.AuthService.login(value)
       .then((resp) => {
-        console.log(resp)
+        //redirect to dashboard page
       })
       .catch((err) =>  {
         console.log(err.error)
