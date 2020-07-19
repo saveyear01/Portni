@@ -1,7 +1,10 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { HTTP_INTERCEPTORS } from '@angular/common/http';
 
 import {UIRouterModule} from "@uirouter/angular";
+
+import {  CustomHttpInterceptor } from './commons/services/interceptors/token.interceptor';
 
 import { APP_STATES } from './commons/utils/states';
 import { AppComponent } from './app.component';
@@ -19,7 +22,9 @@ import { APP_BASE_HREF } from '@angular/common';
     UIRouterModule.forRoot(APP_STATES),
     AuthModule
   ],
-  providers: [{provide: APP_BASE_HREF, useValue: '/'}],
+  providers: [
+    {provide: APP_BASE_HREF, useValue : '/' },
+    {provide: HTTP_INTERCEPTORS, useClass: CustomHttpInterceptor, multi: true}],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
