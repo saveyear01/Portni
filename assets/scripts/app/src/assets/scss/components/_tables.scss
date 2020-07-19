@@ -1,0 +1,9 @@
+.table {
+    width: 100%;
+    overflow-x: auto;
+    &-content {
+        width: rem(820);
+
+        max-height: rem(500);
+    }
+}

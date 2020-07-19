@@ -1,0 +1,65 @@
+// typography
+
+$Montserrat-Black: 'Montserrat-Black';
+$Montserrat-BlackItalic: 'Montserrat-BlackItalic';
+$Montserrat-Bold: 'Montserrat-Bold';
+$Montserrat-BoldItalic: 'Montserrat-BoldItalic';
+$Montserrat-ExtraBold: 'Montserrat-ExtraBold';
+$Montserrat-ExtraBoldItalic: 'Montserrat-ExtraBoldItalic';
+$Montserrat-ExtraLight: 'Montserrat-ExtraLight';
+$Montserrat-ExtraLightItalic: 'Montserrat-ExtraLightItalic';
+$Montserrat-Italic: 'Montserrat-Italic';
+$Montserrat-Light: 'Montserrat-Light';
+$Montserrat-LightItalic: 'Montserrat-LightItalic';
+$Montserrat-MediumItalic: 'Montserrat-MediumItalic';
+$Montserrat-Regular: 'Montserrat-Regular';
+$Montserrat-SemiBold: 'Montserrat-SemiBold';
+$Montserrat-SemiBoldItalic: 'Montserrat-SemiBoldItalic';
+$Montserrat-Thin: 'Montserrat-Thin';
+$Montserrat-ThinItalic: 'Montserrat-ThinItalic';
+
+
+//colors
+
+// theme colors
+$primary:       #F98726;
+$secondary:     #868686;
+$success:       #00AE3B;
+$danger:        #FF0000;
+$info:          #1665FF;
+
+
+// primary text
+$primary-text: #1C1A1A;
+
+
+// grays 
+$gray-100: #FAFAFA;
+$gray-200: #868686;
+
+
+// fonts
+
+$h1-font-size: rem(40);
+$h2-font-size: rem(35);
+$h3-font-size: rem(30);
+$h4-font-size: rem(25);
+$h5-font-size: rem(16);
+$h6-font-size: rem(14);
+
+$small-font-size: rem(10);
+
+
+//fonts path 
+$font-path: '../fonts';
+$font-path-montserrat: '#{$font-path}/Montserrat';
+
+
+// avatar sizes
+
+$avatar-sizes: (
+    'sm': 30px,
+    'md': 40px,
+    'lg': 70px,
+    'xl': 100px,
+);

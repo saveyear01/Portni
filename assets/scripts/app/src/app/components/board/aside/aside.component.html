@@ -1,1 +1,40 @@
-<p>aside works!</p>
+<aside class="side-nav d-none d-lg-block px-4">
+    <nav>
+        <div class="px-3 py-2 bg-light rounded">
+            <span class="text-primary-text" href=""><i class="far h5 mb-0 text-primary mr-2 fa-analytics"></i>Dashboard</span>
+        </div>
+        <div class="px-3 py-2">
+            <a class="text-primary-text" (click)="isMarketCollapsed = !isMarketCollapsed"
+                [attr.aria-expanded]="isMarketCollapsed" aria-controls="collapseMarket">
+                <i class="far h5 text-primary mr-2 fa-tags"></i>
+                Markets
+            </a>
+            <div class="collapse" id="collapseMarket" [ngbCollapse]="isMarketCollapsed">
+               <ul>
+                   <li class="text-primary-text h6 rounded px-3 bg-light py-2">Forex</li>
+                   <li class="text-primary-text h6 rounded px-3 py-1">Stock Market
+                   <li class="text-primary-text h6 rounded px-3 py-1"> Cryptocurrency</li>
+               </ul>
+            </div>
+        </div>
+        <div class="px-3 py-2">
+            <a class="text-primary-text" (click)="isPortCollapsed = !isPortCollapsed"
+            [attr.aria-expanded]="isPortCollapsed" aria-controls="collapsePort">
+                <i class="far h5 text-primary mr-2 fa-briefcase"></i>
+                Portfolio
+            </a>
+            <div class="collapse" id="collapsePort" [ngbCollapse]="isPortCollapsed">
+               <ul>
+                   <li class="text-primary-text h6 py-1">Portfolio 1</li>
+                   <li class="text-primary-text h6 py-1">Portfolio 2</li>
+                   <li class="">
+                       <a href="#" class="text-secondary small">
+                            <i class="fal fa-plus"></i>
+                           Add new Portfolio
+                        </a>
+                   </li>
+               </ul>
+            </div>
+        </div>
+    </nav>
+</aside>

@@ -6,7 +6,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./aside.component.scss']
 })
 export class AsideComponent implements OnInit {
+  public isMarketCollapsed: boolean = true;
+  public isPortCollapsed: boolean = true;
 
+  
   constructor() { }
 
   ngOnInit(): void {

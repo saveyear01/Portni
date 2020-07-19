@@ -1,0 +1,13 @@
+body {
+    font-family: $Montserrat-Regular !important;
+}
+
+a {
+    &:hover{
+        text-decoration: none !important;
+    }
+}
+
+ul {
+    list-style: none !important;
+}

@@ -1,0 +1,7 @@
+@each $key, $value in $avatar-sizes {
+    .avatar-#{$key} {
+        width: $value;
+        height: $value;
+        object-fit: cover;
+    }
+}

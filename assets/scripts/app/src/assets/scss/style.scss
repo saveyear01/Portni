@@ -1,17 +1,26 @@
 // commons
+@import './commons/functions';
 @import './commons/variables';
 @import './commons/typography';
 @import './commons/mixins';
 @import './commons/utils';
 
-
-//overrides
+// overrides 
 @import './overrides/bootstrap';
 
-//import bootstrap
 
+// import bootstrap
 @import '../../../node_modules/bootstrap/scss/bootstrap.scss';
 
-//components
+//import fontawesome 
+@import '../../../node_modules/@fortawesome/fontawesome-pro/scss/fontawesome.scss';
 
-//pages
+// components 
+@import './components/avatars';
+@import './components/side-nav';
+@import './components/tables';
+@import './components/layout';
+
+// pages
+
+

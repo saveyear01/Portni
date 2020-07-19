@@ -6,6 +6,7 @@ import { UIRouterModule } from '@uirouter/angular';
 import { BaseComponent } from './base/base.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { AsideComponent } from './aside/aside.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 
 
@@ -18,7 +19,8 @@ import { AsideComponent } from './aside/aside.component';
   ],
   imports: [
     CommonModule,
-    UIRouterModule
+    UIRouterModule,
+    NgbModule
   ]
 })
 export class BoardModule { }

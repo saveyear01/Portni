@@ -13,8 +13,7 @@ import { AppComponent } from './app.component';
 
 import { AuthModule } from './components/auth/auth.module';
 import { BoardModule } from './components/board/board.module';
-import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-
+import { PartialsModule } from './components/partials/partials.module';
 
 
 @NgModule({
@@ -27,7 +26,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     UIRouterModule.forRoot(APP_STATES),
     AuthModule,
     BoardModule,
-    // NgbModule,
+    PartialsModule
   ],
   providers: [
     {provide: APP_BASE_HREF, useValue : '/' },
