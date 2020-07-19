@@ -5,7 +5,6 @@ import { HttpClientModule } from '@angular/common/http';
 
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
-import { BaseComponent } from './base/base.component';
 
 import {UIRouterModule} from "@uirouter/angular";
 
@@ -14,7 +13,7 @@ import {UIRouterModule} from "@uirouter/angular";
 @NgModule({
   declarations: [
     LoginComponent, 
-    RegisterComponent, BaseComponent
+    RegisterComponent
   ],
   imports: [
     CommonModule,
